@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 에러 핸들링
+      //   let n = 3;
+      //   n.substring(0, 3);
+
+      //   console.log("아직 에러 없어요.";
+      //   num; // 에러
+      //   console.log("에러 다음 코드");
+      //   console.log("try/catch 구문 밖의 코드");
+
+      //
+
+      //   try {
+      //     console.log("아직 에러 없어요.");
+      //     getWeather(); // 에러
+      //     // 기상청 날씨 정보를 조회하는 API
+      //     console.log("에러 다음 코드");
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+
+      //   console.log("try/catch 구문 밖의 코드");
+
+      // try {
+      //     setTimeout(() => {
+      //         getWeather(); // 에러
+      //     }, 1000);
+      // } catch(error) {
+
+      // }
+
+      // setTimeout(() => {
+      //     try {
+      //         getWeather(); // 에러
+      //     } catch (error) {
+
+      //     }
+      // }, 1000);
+
+      try {
+        getWeather(); // 에러
+      } catch (error) {
+        console.log(error.name);
+        console.log(error.message);
+        // if(error instanceof ReferenceError) {
+
+        // }else if(error instanceof TypeError) {
+
+        // }
+      } finally {
+        console.log("에러가 나든 안나든 실행");
+      }
+
+      let x = "";
+
+      try {
+        if (x === "") {
+          throw "empty";
+        }
+
+        // x 비어있지 않은 경우 실행해야 될 코드가 있음.
+
+        //
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+  </body>
+</html>
